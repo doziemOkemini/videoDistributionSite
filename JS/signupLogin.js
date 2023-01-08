@@ -65,7 +65,7 @@ function loginAuth(){
             console.log(val)
             if( val["userName"] === name && val["password"] === pass  && val["isCreator"] === "true" ){
                 console.log('Clickedt')
-                window.location.href = "/index.html"
+                window.location.href = "/creator.html"
             }else if( val["userName"] === name && val["password"] === pass  && val["isCreator"] === "false" ){
                 console.log('Clickedf')
                 window.location.href = "/consumer.html"
