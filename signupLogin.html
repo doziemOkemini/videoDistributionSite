@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <style type="text/css">
+        *{
+            padding: 2px;
+            margin: 3px;
+        }
+        .form2{
+            display: none;
+        }
+    </style>
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="page-header">
+        <h2 class="text-center">Login</h2>
+    </div>
+
+    <div class="container">
+        <div class="form1 col-md-4 col-md-offset-4 col-sm-offset-3  col-sm-6 col-xs-8 col-xs-offset-2">
+            <div>
+                <h3 class="active">Login</h3>
+                <hr>
+                <br>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="" placeholder="username" id="loginUserName">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="" placeholder="password" id="loginPassword">
+            </div>
+            <div class="form-group">
+                <input type="button" class="btn btn-info" name="" value="Login" id="loginCheck">
+            </div>
+            
+            <div>
+                <p>not a member yet please? <a href="" id="signUp">signup</a> </p>
+            </div>
+        </div>
+
+        <div class="form2 col-md-4 col-md-offset-4 col-sm-offset-3  col-sm-6 col-xs-8 col-xs-offset-2">
+            <div>
+                <h3 class="active">SignUp</h3>
+                <hr>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="" placeholder="username" id="userName">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="" placeholder="password" id="Password">
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input messageCheckbox" type="checkbox" value="" id="flexCheckChecked" onchange="creator=this.checked">
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Creator?
+                    </label>
+                </div>
+                <input type="button" class="btn btn-info" name="" value="Signup" id="signupcomplete">
+            </div>
+            
+            <div>
+                <p>Already a member please? <a href="" id="logIn">Login</a> </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="JS/signupLogin.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#signUp').on('click', function(e){
+                $('.form1').hide('slow');
+                $('.form2').css('display', 'inline');
+                e.preventDefault();
+            })
+        })
+        $(function(){
+            $('#logIn').on('click', function(e){
+                $('.form2').hide('slow');
+                $('.form1').css('display', 'inline');
+                e.preventDefault();
+            })
+        })
+    </script>
+</body>
+</html>
